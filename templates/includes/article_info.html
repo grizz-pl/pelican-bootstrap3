@@ -1,11 +1,11 @@
 <footer class="post-info">
-    <span class="label label-default">Date</span>
+    <span class="label label-default"></span>
     <span class="published">
         <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }}</time>
     </span>
     {% if SHOW_DATE_MODIFIED %}
         {% if article.modified %}
-            <span class="label label-default">Modified</span>
+            <span class="label label-default">Zmodyfikowano</span>
             <span class="modified">
                 <i class="fa fa-calendar"></i><time datetime="{{ article.modified.isoformat() }}"> {{ article.locale_modified }}</time>
             </span>
@@ -21,13 +21,13 @@
 
     {% if SHOW_ARTICLE_AUTHOR %}
         {% if article.author %}
-            <span class="label label-default">By</span>
+            <span class="label label-default">Przez</span>
             <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>
         {% endif %}
     {% endif %}
 
     {% if SHOW_ARTICLE_CATEGORY %}
-        <span class="label label-default">Category</span>
+        <span class="label label-default">Kategoria</span>
         <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     {% endif %}
 
